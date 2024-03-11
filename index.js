@@ -40,7 +40,7 @@ gary.children[1] = `Cole`;
 
 gary.children.splice(2, 1, `Duke`);
 
-console.log(gary);
+// console.log(gary);
 
 // for(let i = 0; i < gary.children.length; i++) {
 //   console.log(gary.children[i]);
@@ -86,3 +86,29 @@ console.log(gary);
 // board[0][1] = `x`;
 
 // console.log(board);
+
+
+
+
+// names of bunnies
+// count how many bunnies have that name
+
+const names = [`Floppy`, `Floppy`, `Henry`, `Henry`, `Floopy`, `Flippy`, `Flippy`, `Flippy`, `Devin`];
+
+const bunnies = {};
+
+for(let i = 0; i < names.length; i++) {
+  const bunnyName = names[i];
+  // if it doesn't exist in the obj
+  if(bunnies[bunnyName] === undefined) {
+    // add it to the obj with a default value of 1
+    bunnies[bunnyName] = 1;
+
+    // if it does exist
+  } else {
+    // add one to the count
+    bunnies[bunnyName]++; // bunnies[bunnyName] += 1; 
+  } 
+}
+
+console.log(bunnies);
